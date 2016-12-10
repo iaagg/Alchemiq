@@ -4,6 +4,8 @@
 [![License](https://img.shields.io/cocoapods/l/Alchemiq.svg?style=flat)](http://cocoapods.org/pods/Alchemiq)
 [![Platform](https://img.shields.io/cocoapods/p/Alchemiq.svg?style=flat)](http://cocoapods.org/pods/Alchemiq)
 
+![enter image description here](https://s23.postimg.org/p3bd5odor/alchemiq.png)
+
 **Alchemiq** was created to provide possibility of using mixins *(aka traits)* in Objective-C. 
 Inspired by mixin ideas in Ruby modules and Swift protocol extensions. 
 Different from https://github.com/vl4dimir/ObjectiveMixin in much more convenient API. 
