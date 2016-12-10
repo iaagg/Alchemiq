@@ -14,6 +14,9 @@ What is convenient - after adopting some mixin, you can call any methods (class 
 
 Brilliant, huh?! ^^
 
+## Requirements
+ios 8.0 or higher
+
 ## How to start
 
 1. First, you need to call method **[AQAlchemiq addMixins]** in your AppDelegate
@@ -92,9 +95,6 @@ For example, if you have mixin called ***SomeMixin***, then your mixin descripti
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
-ios 7.0 or higher
 
 ## Installation
 
