@@ -15,8 +15,7 @@
 + (NSArray<Protocol *> *)getMixins {
     NSMutableSet *foundMixins = [NSMutableSet new];
     
-    Protocol *mixins = NULL;
-    int totalProtocolsCount;
+    unsigned int totalProtocolsCount;
     Protocol * __unsafe_unretained *foundProtocols = objc_copyProtocolList(&totalProtocolsCount);
     
     if (totalProtocolsCount > 0) {
@@ -55,7 +54,7 @@
     
     if (totalClassesCount > 0) {
         classes = (__unsafe_unretained Class *)(malloc(sizeof(Class *) * totalClassesCount));
-        objc_getClassList(classes, &totalClassesCount);
+        objc_getClassList(classes, totalClassesCount);
         
         for (int i = 0; i < totalClassesCount; i++) {
             Class foundClass = classes[i];
@@ -96,7 +95,7 @@
     
     if (totalClassesCount > 0) {
         classes = (__unsafe_unretained Class *)(malloc(sizeof(Class *) * totalClassesCount));
-        objc_getClassList(classes, &totalClassesCount);
+        objc_getClassList(classes, totalClassesCount);
         
         for (int i = 0; i < totalClassesCount; i++) {
             Class foundClass = classes[i];

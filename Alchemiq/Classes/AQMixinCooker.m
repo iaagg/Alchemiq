@@ -79,10 +79,11 @@ static NSString * const descriptionKey =    @"description";
 + (void)p_injectMixin:(Protocol *)mixin withDescription:(Class)description inClass:(Class)class {
     [self p_injectMethodsFromMixin:mixin withDescription:description inClass:class];
     
-    unsigned protocolCount;
+    unsigned int protocolCount;
     Protocol * __unsafe_unretained *protocols = protocol_copyProtocolList(mixin, &protocolCount);
     
     if (protocolCount > 0) {
+        
         for (int i = 0; i < protocolCount; i++) {
             Protocol *innerMixin = protocols[i];
             
@@ -108,22 +109,22 @@ static NSString * const descriptionKey =    @"description";
 }
 
 + (void)p_injectMethodsFromMixin:(Protocol *)mixin withDescription:(Class)description inClass:(Class)class {
-    int mixinOptionalInstanceMethodsCount;
+    unsigned int mixinOptionalInstanceMethodsCount;
     struct objc_method_description *optionalInstanceMethods = protocol_copyMethodDescriptionList(mixin, NO, YES, &mixinOptionalInstanceMethodsCount);
     [self p_injectMethods:optionalInstanceMethods methodsCount:mixinOptionalInstanceMethodsCount withDescription:description inClass:class];
     free(optionalInstanceMethods);
     
-    int mixinRequiredInstanceMethodsCount;
+    unsigned int mixinRequiredInstanceMethodsCount;
     struct objc_method_description *requiredInstanceMethods = protocol_copyMethodDescriptionList(mixin, YES, YES, &mixinRequiredInstanceMethodsCount);
     [self p_injectMethods:requiredInstanceMethods methodsCount:mixinRequiredInstanceMethodsCount withDescription:description inClass:class];
     free(requiredInstanceMethods);
     
-    int mixinOptionalClassMethodsCount;
+    unsigned int mixinOptionalClassMethodsCount;
     struct objc_method_description *optionalClassMethods = protocol_copyMethodDescriptionList(mixin, NO, NO, &mixinOptionalClassMethodsCount);
     [self p_injectMethods:optionalClassMethods methodsCount:mixinOptionalClassMethodsCount withDescription:description inClass:class];
     free(optionalClassMethods);
     
-    int mixinRequiredClassMethodsCount;
+    unsigned int mixinRequiredClassMethodsCount;
     struct objc_method_description *requiredClassMethods = protocol_copyMethodDescriptionList(mixin, YES, NO, &mixinRequiredClassMethodsCount);
     [self p_injectMethods:requiredClassMethods methodsCount:mixinRequiredClassMethodsCount withDescription:description inClass:class];
     free(requiredClassMethods);
@@ -136,6 +137,7 @@ static NSString * const descriptionKey =    @"description";
             
             struct objc_method_description method = methods[i];
             [self p_getMethodImplementation:method.name fromMixinDescription:description completion:^(IMP implementation, BOOL classMethod) {
+                
                 if (implementation) {
                     
                     if (classMethod) {
@@ -152,7 +154,7 @@ static NSString * const descriptionKey =    @"description";
 
 + (void)p_getMethodImplementation:(SEL)methodName fromMixinDescription:(Class)description completion:(void(^)(IMP implementation, BOOL classMethod))completion {
     if (methodName == @selector(debugDescription)) {
-        completion(nil, nil);
+        completion(nil, NO);
     }
     
     if ([description instancesRespondToSelector:methodName]) {
@@ -166,7 +168,7 @@ static NSString * const descriptionKey =    @"description";
         completion(methodImplementation, YES);
     }
     
-    completion(nil, nil);
+    completion(nil, NO);
 }
 
 + (Class)p_getMetaclassFromClass:(Class)class {
