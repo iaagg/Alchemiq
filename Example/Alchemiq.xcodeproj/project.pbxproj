@@ -25,7 +25,6 @@
 		6B422D551DFC396B00FB2058 /* AlertMixinDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B422D541DFC396B00FB2058 /* AlertMixinDescription.m */; };
 		6B422D611DFC838000FB2058 /* AQTestMixinDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B422D601DFC838000FB2058 /* AQTestMixinDescription.m */; };
 		6B422D631DFC847400FB2058 /* AQSomeTestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B422D5C1DFC832400FB2058 /* AQSomeTestClass.m */; };
-		6B422D661DFCC18B00FB2058 /* Alchemiq.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6B422D641DFCC18B00FB2058 /* Alchemiq.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -38,20 +37,6 @@
 			remoteInfo = Alchemiq;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		6B422D671DFCC18C00FB2058 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				6B422D661DFCC18B00FB2058 /* Alchemiq.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		185BCE41CE2BD56EA40A8F92 /* Pods-Alchemiq_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alchemiq_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Alchemiq_Example/Pods-Alchemiq_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -85,7 +70,6 @@
 		6B422D5E1DFC833D00FB2058 /* AQTestMixin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQTestMixin.h; sourceTree = "<group>"; };
 		6B422D5F1DFC838000FB2058 /* AQTestMixinDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQTestMixinDescription.h; sourceTree = "<group>"; };
 		6B422D601DFC838000FB2058 /* AQTestMixinDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQTestMixinDescription.m; sourceTree = "<group>"; };
-		6B422D641DFCC18B00FB2058 /* Alchemiq.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Alchemiq.framework; path = "/Users/iaagg/Development/dev/Alchemiq/Example/build/Debug-iphoneos/Alchemiq.framework"; sourceTree = "<absolute>"; };
 		6ECA787833BD2AD1BCEBC7DC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		90A7F60810B33FB2D1A889E5 /* Pods-Alchemiq_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alchemiq_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Alchemiq_Tests/Pods-Alchemiq_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -241,7 +225,6 @@
 				6003F588195388D20070C39A /* Resources */,
 				3236E11CE601836C43B16955 /* [CP] Embed Pods Frameworks */,
 				BB4DA95BC3FA849EBA1097BF /* [CP] Copy Pods Resources */,
-				6B422D671DFCC18C00FB2058 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -506,7 +489,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -539,7 +522,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

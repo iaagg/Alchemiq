@@ -1,9 +1,9 @@
 use_frameworks!
 
 target 'Alchemiq_Example' do
-  pod 'Alchemiq'
+  pod 'Alchemiq', '1.0.2'
 end
 
 target 'Alchemiq_Tests' do
-  pod 'Alchemiq'
+  pod 'Alchemiq', '1.0.2'
 end
