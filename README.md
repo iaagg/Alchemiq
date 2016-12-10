@@ -86,6 +86,7 @@ For example, if you have mixin called ***SomeMixin***, then your mixin descripti
 ```
 3. Only implemented methods will be injected into your class with mixin.
 4. You can use setters and getters for properties, but iVars are not available now.
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
