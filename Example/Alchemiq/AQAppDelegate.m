@@ -7,12 +7,13 @@
 //
 
 #import "AQAppDelegate.h"
+#import "AQAlchemiq.h"
 
 @implementation AQAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    [AQAlchemiq addMixins];
     return YES;
 }
 

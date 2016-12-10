@@ -2,10 +2,8 @@ use_frameworks!
 
 target 'Alchemiq_Example' do
   pod 'Alchemiq', :path => '../'
+end
 
-  target 'Alchemiq_Tests' do
-    inherit! :search_paths
-
-    
-  end
+target 'Alchemiq_Tests' do
+  pod 'Alchemiq', :path => '../'
 end

@@ -7,7 +7,10 @@
 //
 
 @import UIKit;
+#import "AlertMixin.h"
 
-@interface AQViewController : UIViewController
+@interface AQViewController : UIViewController <AlertMixin>
+
+@property (weak, nonatomic) IBOutlet UIView *tableContainer;
 
 @end

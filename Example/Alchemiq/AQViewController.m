@@ -7,6 +7,7 @@
 //
 
 #import "AQViewController.h"
+#import <objc/runtime.h>
 
 @interface AQViewController ()
 
@@ -17,13 +18,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    self.textToShow = @"Mixin was injected successfully!";
+        
+    [self setupTableView];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)callMixinMethod:(id)sender {
+    [self showDefaultAlert];
 }
+
 
 @end

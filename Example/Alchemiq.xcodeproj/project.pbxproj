@@ -21,7 +21,10 @@
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
-		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
+		6003F5BC195388D20070C39A /* AQAlchemiqTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* AQAlchemiqTests.m */; };
+		6B422D551DFC396B00FB2058 /* AlertMixinDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B422D541DFC396B00FB2058 /* AlertMixinDescription.m */; };
+		6B422D611DFC838000FB2058 /* AQTestMixinDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B422D601DFC838000FB2058 /* AQTestMixinDescription.m */; };
+		6B422D631DFC847400FB2058 /* AQSomeTestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B422D5C1DFC832400FB2058 /* AQSomeTestClass.m */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -37,7 +40,7 @@
 
 /* Begin PBXFileReference section */
 		185BCE41CE2BD56EA40A8F92 /* Pods-Alchemiq_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alchemiq_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Alchemiq_Example/Pods-Alchemiq_Example.release.xcconfig"; sourceTree = "<group>"; };
-		213D789320E2F434B947BD18 /* Alchemiq.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = Alchemiq.podspec; path = ../Alchemiq.podspec; sourceTree = "<group>"; };
+		213D789320E2F434B947BD18 /* Alchemiq.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Alchemiq.podspec; path = ../Alchemiq.podspec; sourceTree = "<group>"; };
 		5A7B23EFFFD79461155087B2 /* Pods_Alchemiq_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Alchemiq_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58A195388D20070C39A /* Alchemiq_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alchemiq_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -56,10 +59,18 @@
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		6003F5B7195388D20070C39A /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
+		6003F5BB195388D20070C39A /* AQAlchemiqTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AQAlchemiqTests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
-		656F560AE511FD0586412F88 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		6ECA787833BD2AD1BCEBC7DC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		656F560AE511FD0586412F88 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		6B422D531DFC396B00FB2058 /* AlertMixinDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertMixinDescription.h; sourceTree = "<group>"; };
+		6B422D541DFC396B00FB2058 /* AlertMixinDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertMixinDescription.m; sourceTree = "<group>"; };
+		6B422D561DFC398A00FB2058 /* AlertMixin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertMixin.h; sourceTree = "<group>"; };
+		6B422D5B1DFC832400FB2058 /* AQSomeTestClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQSomeTestClass.h; sourceTree = "<group>"; };
+		6B422D5C1DFC832400FB2058 /* AQSomeTestClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQSomeTestClass.m; sourceTree = "<group>"; };
+		6B422D5E1DFC833D00FB2058 /* AQTestMixin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQTestMixin.h; sourceTree = "<group>"; };
+		6B422D5F1DFC838000FB2058 /* AQTestMixinDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQTestMixinDescription.h; sourceTree = "<group>"; };
+		6B422D601DFC838000FB2058 /* AQTestMixinDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQTestMixinDescription.m; sourceTree = "<group>"; };
+		6ECA787833BD2AD1BCEBC7DC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		90A7F60810B33FB2D1A889E5 /* Pods-Alchemiq_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alchemiq_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Alchemiq_Tests/Pods-Alchemiq_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		A98D7ECAEEAA1F8C8BEE1417 /* Pods_Alchemiq_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Alchemiq_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,13 +152,16 @@
 		6003F593195388D20070C39A /* Example for Alchemiq */ = {
 			isa = PBXGroup;
 			children = (
+				6003F594195388D20070C39A /* Supporting Files */,
 				6003F59C195388D20070C39A /* AQAppDelegate.h */,
 				6003F59D195388D20070C39A /* AQAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* AQViewController.h */,
 				6003F5A6195388D20070C39A /* AQViewController.m */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
-				6003F594195388D20070C39A /* Supporting Files */,
+				6B422D561DFC398A00FB2058 /* AlertMixin.h */,
+				6B422D531DFC396B00FB2058 /* AlertMixinDescription.h */,
+				6B422D541DFC396B00FB2058 /* AlertMixinDescription.m */,
 			);
 			name = "Example for Alchemiq";
 			path = Alchemiq;
@@ -167,7 +181,12 @@
 		6003F5B5195388D20070C39A /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				6003F5BB195388D20070C39A /* Tests.m */,
+				6003F5BB195388D20070C39A /* AQAlchemiqTests.m */,
+				6B422D5B1DFC832400FB2058 /* AQSomeTestClass.h */,
+				6B422D5C1DFC832400FB2058 /* AQSomeTestClass.m */,
+				6B422D5E1DFC833D00FB2058 /* AQTestMixin.h */,
+				6B422D5F1DFC838000FB2058 /* AQTestMixinDescription.h */,
+				6B422D601DFC838000FB2058 /* AQTestMixinDescription.m */,
 				6003F5B6195388D20070C39A /* Supporting Files */,
 			);
 			path = Tests;
@@ -393,6 +412,7 @@
 				6003F59E195388D20070C39A /* AQAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* AQViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				6B422D551DFC396B00FB2058 /* AlertMixinDescription.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,7 +420,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6003F5BC195388D20070C39A /* Tests.m in Sources */,
+				6B422D631DFC847400FB2058 /* AQSomeTestClass.m in Sources */,
+				6B422D611DFC838000FB2058 /* AQTestMixinDescription.m in Sources */,
+				6003F5BC195388D20070C39A /* AQAlchemiqTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
