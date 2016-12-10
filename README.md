@@ -19,8 +19,8 @@ Brilliant, huh?! ^^
 ```obj-c
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-[AQAlchemiq addMixins];
-return YES;
+    [AQAlchemiq addMixins];
+    return YES;
 }
 ```
 Doing this you start process of collecting all mixins, their descriptions and your classes you want to conform some mixin!
@@ -47,8 +47,8 @@ Doing this you start process of collecting all mixins, their descriptions and yo
 
 @implementation SomeMixinDescription
 - (void)someMethod {
--   //Implementation
-- }
+    //Implementation
+}
 @end
 ```
 + After that you can implement methods inside of your MixinDescription class. 
@@ -59,25 +59,29 @@ Doing this you start process of collecting all mixins, their descriptions and yo
 
 @implementation SomeViewController
 - (void)viewDidLoad {
--   [super viewDidLoad];
--   [self someMethod];
-- }
+    [super viewDidLoad];
+    [self someMethod];
+}
 @end
 ```
 # What is important:
-1. Your mixin description class should have definite name like this "<mixin_protocol_name>Description". 
+1. Your mixin description class should have definite name like this "[mixin_protocol_name]Description". 
 For example, if you have mixin called ***SomeMixin***, then your mixin description should have name ***SomeMixin*Description**
 2. For generation of setters and getters, use **@synthesize** construction.
 ```obj-c
 @protocol SomeMixin <AQMixin>
+
 @property (strong, nonatomic) NSString someProperty;
+
 @end
 
 @interface SomeMixinDescription <SomeMixin>
 @end
 
 @implementation SomeMixinDescription
+
 @synthesize someProperty;
+
 @end
 ```
 3. Only implemented methods will be injected into your class with mixin.
